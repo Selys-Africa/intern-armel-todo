@@ -1,0 +1,83 @@
+{% extends 'base.html.twig' %}
+{% block header %}
+
+		<div class="container-fluid shadow-sm p-0 m-0" style="">
+		<div class="row p-4">
+			<div class="col-2" style="display:flex;justify-content: center;align-items: center;">
+				<span style="font-size:20px;font-weight: bolder;"><span >M</span><span class="p-3 shadow-lg" style="background-color:#0663f8;color: white;border-top-left-radius: 10px;border-top-right-radius: 10px;">y</span><span >Todo</span></span><?php require'sidebar.php' ?>
+			</div>
+			
+			<div class="col-1">
+				<div style="background-color:#eee;width: 40px;height: 40px;border-radius: 100px;display: flex;justify-content: center;align-items: center;">
+					<a data-toggle="tooltip" data-placement="top" title="Changer de langues" href="" style="text-decoration:none;"><span class="p-2 fa fa-language" style=""></span></a>
+				</div>
+			</div>
+			<div class="col-1">
+				<div style="background-color:#eee;width: 40px;height: 40px;border-radius: 100px;display: flex;justify-content: center;align-items: center;">
+					<a data-toggle="tooltip" data-placement="top" title="Notification" href="" style="text-decoration:none;"><span class="p-2 fa fa-envelope-o" style=""></span></a>
+				</div>
+				
+			</div>
+			<div class="col-1">
+				<div style="background-color:#eee;width: 40px;height: 40px;border-radius: 100px;display: flex;justify-content: center;align-items: center;">
+					<a data-toggle="tooltip" data-placement="top" title="User" href="" style="text-decoration:none;"><span class="p-2 fa fa-user" style=""></span></a>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	{% endblock %}
+{% block body %}
+
+
+
+
+
+	<div class="container mt-5">
+		<div class="row">
+			<div class="col-12">
+				<div class="row mx-2">
+					<div class="col-12 text-white shadow-lg" style="background-color:#0663f8;border-radius:10px">
+						<div class="p-4">
+							<div data-aos="zoom-in" data-aos-duration="1000" style="display:flex;justify-content: space-between;">
+								<p class="text-rechercher2">My TodoList</p>
+								<p class="text-rechercher2"><span class="fa fa-cubes fa-2x"></span></p>
+							</div>
+							<p data-aos="zoom-in" data-aos-duration="1000" class="titre-newsletter " style="font-size:22px;font-weight:bold;">Sam User</p>
+							<p data-aos="zoom-in" data-aos-duration="1000" class="text-rechercher2">Bienvenue sur votre espace</p>
+						</div>
+					</div>
+
+					<div class="col-12 mt-5 p-4 shadow-lg" style="border-radius:10px;font-size:15px">
+						<div style="display:flex;justify-content: space-between;font-size: 14px;color: black;">
+							<p>Mes Taches</p>
+							<p>Trier par <span class="fa fa-angle-double-down"></span></p>
+						</div>
+						
+
+						<div class="col-12">
+			{{form_start(form)}}
+				<div class="form-group">
+						
+						{{form_widget(form.name)}}
+						{{form_errors(form.name)}}
+					</div>
+					<div class="form-group">
+						{{form_row(form.submit)}}
+						
+					</div>
+				{{form_rest(form)}}
+			{{form_end(form)}}
+			</div>
+						
+					</div>
+				</div>
+			</div>
+
+
+			
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

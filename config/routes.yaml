@@ -1,0 +1,20 @@
+controllers:
+    resource: ../src/Controller/
+    type: attribute
+
+
+home : 
+    path : /
+    controller : App\Controller\HomeController::index
+
+userProfil : 
+    path : /dashboard/home
+    controller : App\Controller\DashboardController::new
+
+delete : 
+    path : /delete/{id}
+    controller : App\Controller\DashboardController::delete
+
+edit : 
+    path : /edit/{id}
+    controller : App\Controller\DashboardController::edit

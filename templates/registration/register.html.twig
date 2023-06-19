@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+    <h3 class='text-center mt-3 p-3'>S'inscrire</h3>
+    <div class='container p-4'>
+        {{ form_start(registrationForm) }}
+
+        <div class='row'>
+            <div class="col-lg-6 col-12 col-md-12 mt-5 text-center image-details-container" data-aos="zoom-out" data-aos-duration="1000">
+                <img src="https://img.freepik.com/free-vector/mobile-login-concept-illustration_114360-83.jpg?w=2000" class="image-details-connexion" style="width: 380px;">
+            </div>
+
+            <div class='col-12 col-lg-6 col-md-12'>
+                <div class='mt-2 alert  p-2'>
+                    {{ form_errors(registrationForm) }}
+                </div><br>
+                <div class='form-group'>
+                    <p>{{ form_label(registrationForm.email) }}</p>
+                    {{ form_widget(registrationForm.email) }}
+                    <p class='text-danger p-2'>{{ form_errors(registrationForm.email) }}</p>
+                </div><br>
+                <div class='form-group'>
+                    <p>{{ form_label(registrationForm.plainPassword) }}</p>
+                    {{ form_widget(registrationForm.plainPassword) }}
+                    <p class='text-danger p-2'>{{ form_errors(registrationForm.plainPassword) }}</p>
+                </div>
+                <div class='form-group'>
+                    {{ form_row(registrationForm.agreeTerms) }}
+                </div><br>
+                <div class='form-group'>
+                    <button type="submit" class="form-control btn btn-primary">S'inscrire</button>
+                </div>
+            </div>
+
+        </div>
+        {{ form_end(registrationForm) }}
+        
+
+    </div>
+
+    
+
+    
+        
+        
+        
+
+        
+    
+{% endblock %}

@@ -1,0 +1,551 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+
+
+
+<div class="container-fluid shadow-lg p-0 m-0 header-container" style="">
+		<?php require 'navbar.php'; ?>
+		<div class="row">
+			<div class="col-12 col-lg-6 col-md-12 p-5">
+				<div class="py-5 px-3">
+					<p><span class="fa fa-hand-peace-o fa-2x text-white"></span> Avec myTodo</p>
+					<p class="mt-2 header-title-text">Gagnez en <span id="element"></span></p><br>
+					<p class="ml-3 fs-15 lh-45">avec vos tâches.Ajoutez facilement et rapidement vos tâches, par exemple "Appeler l'agence de design pour finaliser les maquettes à 8h,Réunion avec l'équipe de SELYS à 9hUTC", grâce à la reconnaissance intelligente du langage naturel et aux dates récurrentes.</p><br><br>
+					<div class="col-12 mt-5">
+						<div class="users-image-container mt-5">
+							<img src="{{asset('assets/img/used02.png')}}" class='userImage'><img src="{{asset('assets/img/used03.png')}}" class='userImage'><img src="{{asset('assets/img/used04.png')}}" class='userImage'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="users-paragraph">500k+ utilisateurs sur notre site</span><br><br><br><br>	
+						</div>
+					</div>
+				</div>
+				<div class="row d-none">
+					<div class="col-6 text-center">
+						<button class="btn" id="btn-sign-up-header">S'inscrire</button>
+					</div>
+					<div class="col-6">
+						<button class="btn btn-white" id="btn-sign-in-header">Se connecter</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-12 col-12 p-5 d-none d-lg-block d-md-block">
+				<div class="shadow-lg floatting">
+					<div class="shadow-lg floatting-sous-div">
+						<div class="row p-3 floatting-sous-div-contenu">
+							<div class="col-2">
+								<span class="head-icone text-dark fa fa-braille"></span>
+							</div>
+							<div class="col-8">
+								<p class="text-center head-title">MyTodo</p>
+							</div>
+							<div class="col-2">
+								<span class="head-icone text-dark fa fa-clock-o"></span>
+							</div>
+							<div class="col-12 ">
+								<div class="swiper mySwiper0">
+				    				<div class="swiper-wrapper">
+							      		<div class=" swiper-slide slide-element0">
+							      			
+							      			<div class="pt-2">
+							      				<p class="title-date text-center text-white">05 <br></p>
+							      				<p class="text-center text-white title2-date" >Lun</p>
+							      			</div>
+							      			
+							      		</div>
+							      		<div class=" swiper-slide slide-element0">
+							      			
+							      			<div class="pt-2">
+							      				<p class="title-date text-center text-white">06 <br></p>
+							      				<p class="text-center text-white title2-date">Mar</p>
+							      			</div>
+							      			
+							      		</div>
+							      		<div class=" swiper-slide slide-element0">
+							      			
+							      			<div class="pt-2">
+							      				<p class="title-date text-center text-white">07 <br></p>
+							      				<p class="text-center text-white title2-date">Mer</p>
+							      			</div>
+							      			
+							      		</div>
+							      		<div class=" swiper-slide slide-element0">
+							      			
+							      			<div class="pt-2">
+							      				<p class="title-date text-center text-white">08 <br></p>
+							      				<p class="text-center text-white title2-date">Jeu</p>
+							      			</div>
+							      			
+							      		</div>
+							      		<div class=" swiper-slide slide-element0">
+							      			
+							      			<div class="pt-2">
+							      				<p class="title-date text-center text-white">09 <br></p>
+							      				<p class="text-center text-white title2-date">Ven</p>
+							      			</div>
+							      			
+							      		</div>
+							      		<div class=" swiper-slide slide-element0">
+							      			
+							      			<div class="pt-2">
+							      				<p class="title-date text-center text-white">10 <br></p>
+							      				<p class="text-center text-white title2-date">Sam</p>
+							      			</div>
+							      			
+							      		</div>
+							      		<div class=" swiper-slide slide-element0">
+							      			
+							      			<div class="pt-2">
+							      				<p class="title-date text-center text-white">11 <br></p>
+							      				<p class="text-center text-white title2-date">Dim</p>
+							      			</div>
+							      			
+							      		</div>
+							      		
+				      				</div>
+				    			</div>
+							</div>
+
+							<div class="container-tache col-12  mt-3">
+								<p>Mes taches</p>
+								<div class="row p-2 container-tache-contenu">
+									<div class="col-2">
+										<span class="fa fa-television tache-icone"></span>
+									</div>
+									<div class="col-8">
+										<p class="">Réunion avec l'équipe de SELYS</p>
+									</div>
+									<div class="col-2">
+										<span class="fa fa-clock-o"></span>
+									</div>
+								</div><br>
+								<div class="row p-2 container-tache-contenu">
+									<div class="col-2">
+										<span class="fa fa-code tache-icone"></span>
+									</div>
+									<div class="col-8">
+										<p class=" ">Programmation orienté objet poo</p>
+									</div>
+									<div class="col-2">
+										<span class="fa fa-clock-o"></span>
+									</div>
+								</div><br>
+								<div class="row p-2 container-tache-contenu">
+									<div class="col-2">
+										<span class="fa fa-phone tache-icone"></span>
+									</div>
+									<div class="col-8">
+										<p class=" ">Appeler l'agence de design pour finaliser les maquettes </p>
+									</div>
+									<div class="col-2">
+										<span class=" fa fa-clock-o"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+
+	<div class="container mb-5 d-none d-lg-block d-md-block">
+		<div class="row text-center mt-5">
+			<p class="text-secondary mt-5">Fonctionnalités de l'application</p>
+			<p class="mt-2 fonctionnalite-title">Organisez enfin votre travail et votre vie.</p><br><br>
+			<div class="col-12 col-lg-3 col-md-3 p-5">
+				<div class="row shadow-lg bd-10 lh-10">
+					<div class="col-12 pt-4 text-center">
+						<span class="fa fa-child fa-2x color"></span>
+					</div>
+					<div class="col-12">
+						<p class="pt-4 fs-35 fw-bold color">50k</p><br>
+						<p class="fs-13">Améliore la mémoire</p><br>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-lg-3 col-md-3 p-5">
+				<div class="row shadow-lg bd-10 lh-10">
+					<div class="col-12 pt-4 text-center">
+						<span class="fa fa-plane fa-2x color"></span>
+					</div>
+					<div class="col-12">
+						<p class="pt-4 fs-35 fw-bold color">50k</p><br>
+						<p class="fs-13">Ajout rapide</p><br>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-lg-3 col-md-3 p-5">
+				<div class="row shadow-lg bd-10 lh-10">
+					<div class="col-12 pt-4 text-center">
+						<span class="fa fa-spinner fa-2x color"></span>
+					</div>
+					<div class="col-12">
+						<p class="pt-4 fs-35 fw-bold color">50k</p><br>
+						<p class="fs-13">Toujours à jour</p><br>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-lg-3 col-md-3 p-5">
+				<div class="row shadow-lg bd-10 lh-10">
+					<div class="col-12 pt-4 text-center">
+						<span class="fa fa-flash fa-2x color"></span>
+					</div>
+					<div class="col-12">
+						<p class="pt-4 fs-35 fw-bold color">50k</p><br>
+						<p class="fs-13">Utilisation facile</p><br>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="container mb-5">
+		<div class="row text-center mt-5">
+			<p class="text-secondary">Fonctionnalités de l'application</p>
+			<p class="mt-2 fonctionnalite-title">Bienvenue sur myTodo</p>
+			<div class="col-12 col-lg-6 col-md-12 p-5">
+				<div class=""  >
+					
+					<img src="{{asset('assets/img/selys.png')}}" class="shadow-lg selys-img d-none d-lg-block d-md-block">
+					<div class="shadow-lg selys-img-div d-none d-lg-block d-md-block">
+						<div class="row p-3 floatting-sous-div-contenu 	">
+							<div class="col-3">
+								<span class="head-date">8:10</span>
+							</div>
+							<div class="col-5">
+								<div class="text-center head-barre mt-1"></div>
+							</div>
+							<div class="col-4 head-wifi-div">
+								<span class="head-wifi text-dark fa fa-wifi"></span> <span> ARMEL</span>
+							</div>
+
+							<div class="col-12 mt-5">
+								<div class="swiper mySwiper00">
+				    				<div class="swiper-wrapper">
+							      		
+							      		<div class=" swiper-slide slide-element0">
+							      			
+							      			<div class="pt-2">
+							      				<p class="title-date text-center text-white">05 <br></p>
+							      				<p class="text-center text-white title2-date" >Lun</p>
+							      			</div>
+							      			
+							      		</div>
+							      		<div class=" swiper-slide slide-element0">
+							      			
+							      			<div class="pt-2">
+							      				<p class="title-date text-center text-white">06 <br></p>
+							      				<p class="text-center text-white title2-date" >Mar</p>
+							      			</div>
+							      			
+							      		</div>
+							      		<div class=" swiper-slide slide-element0">
+							      			
+							      			<div class="pt-2">
+							      				<p class="title-date text-center text-white">07 <br></p>
+							      				<p class="text-center text-white title2-date" >Mer</p>
+							      			</div>
+							      			
+							      		</div>
+							      		<div class=" swiper-slide slide-element0">
+							      			
+							      			<div class="pt-2">
+							      				<p class="title-date text-center text-white">08 <br></p>
+							      				<p class="text-center text-white title2-date" >Jeu</p>
+							      			</div>
+							      			
+							      		</div>
+							      		<div class=" swiper-slide slide-element0">
+							      			
+							      			<div class="pt-2">
+							      				<p class="title-date text-center text-white">09 <br></p>
+							      				<p class="text-center text-white title2-date" >Ven</p>
+							      			</div>
+							      			
+							      		</div>
+							      		<div class=" swiper-slide slide-element0">
+							      			
+							      			<div class="pt-2">
+							      				<p class="title-date text-center text-white">10 <br></p>
+							      				<p class="text-center text-white title2-date" >Sam</p>
+							      			</div>
+							      			
+							      		</div>
+							      		<div class=" swiper-slide slide-element0">
+							      			
+							      			<div class="pt-2">
+							      				<p class="title-date text-center text-white">11 <br></p>
+							      				<p class="text-center text-white title2-date" >Dim</p>
+							      			</div>
+							      			
+							      		</div>
+							      		
+				      				</div>
+				    			</div>
+							</div>
+
+							<div class="col-12  mt-3 div-floatting2">
+								<p>Aucune tache</p>
+								<img src="https://img.freepik.com/premium-vector/planning-minimalistic-concept-with-people-scene-flat-cartoon-style-man-plans-his-working-day_198565-3530.jpg?w=2000" class="img-floatting">
+								<p class="mt-5 text-primary"><span class="fa fa-plus"></span> Ajouter une nouvelle tache</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="shadow-lg selys-img-div-sm d-block d-lg-none d-md-none">
+						<div class="row p-3 floatting-sous-div-contenu 	">
+							<div class="col-3">
+								<span class="head-date">8:10</span>
+							</div>
+							<div class="col-5">
+								<div class="text-center head-barre mt-1"></div>
+							</div>
+							<div class="col-4 head-wifi-div">
+								<span class="head-wifi text-dark fa fa-wifi"></span> <span> ARMEL</span>
+							</div>
+
+							<div class="col-12 mt-5">
+								<div class="swiper mySwiper00">
+				    				<div class="swiper-wrapper">
+							      		
+							      		<div class=" swiper-slide slide-element0">
+							      			
+							      			<div class="pt-2">
+							      				<p class="title-date text-center text-white">05 <br></p>
+							      				<p class="text-center text-white title2-date" >Lun</p>
+							      			</div>
+							      			
+							      		</div>
+							      		<div class=" swiper-slide slide-element0">
+							      			
+							      			<div class="pt-2">
+							      				<p class="title-date text-center text-white">06 <br></p>
+							      				<p class="text-center text-white title2-date" >Mar</p>
+							      			</div>
+							      			
+							      		</div>
+							      		<div class=" swiper-slide slide-element0">
+							      			
+							      			<div class="pt-2">
+							      				<p class="title-date text-center text-white">07 <br></p>
+							      				<p class="text-center text-white title2-date" >Mer</p>
+							      			</div>
+							      			
+							      		</div>
+							      		<div class=" swiper-slide slide-element0">
+							      			
+							      			<div class="pt-2">
+							      				<p class="title-date text-center text-white">08 <br></p>
+							      				<p class="text-center text-white title2-date" >Jeu</p>
+							      			</div>
+							      			
+							      		</div>
+							      		<div class=" swiper-slide slide-element0">
+							      			
+							      			<div class="pt-2">
+							      				<p class="title-date text-center text-white">09 <br></p>
+							      				<p class="text-center text-white title2-date" >Ven</p>
+							      			</div>
+							      			
+							      		</div>
+							      		<div class=" swiper-slide slide-element0">
+							      			
+							      			<div class="pt-2">
+							      				<p class="title-date text-center text-white">10 <br></p>
+							      				<p class="text-center text-white title2-date" >Sam</p>
+							      			</div>
+							      			
+							      		</div>
+							      		<div class=" swiper-slide slide-element0">
+							      			
+							      			<div class="pt-2">
+							      				<p class="title-date text-center text-white">11 <br></p>
+							      				<p class="text-center text-white title2-date" >Dim</p>
+							      			</div>
+							      			
+							      		</div>
+							      		
+				      				</div>
+				    			</div>
+							</div>
+
+							<div class="col-12  mt-3 div-floatting2">
+								<p>Aucune tache</p>
+								<img src="https://img.freepik.com/premium-vector/planning-minimalistic-concept-with-people-scene-flat-cartoon-style-man-plans-his-working-day_198565-3530.jpg?w=2000" class="img-floatting-sm">
+								<p class="mt-5 text-primary"><span class="fa fa-plus"></span> Ajouter une nouvelle tache</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="offset-lg-1 f-family col-5 div-description-floatting2 d-none d-lg-block d-md-block">
+				<div class="row">
+					<div class="col-lg-6 col-12 col-md-12">
+						<div class="shadow-lg div-description-floatting2-text1">
+							<p class="p-4">Professionnel, sûr et sécurisé</p>
+						</div>
+					</div>
+					<div class="col-lg-6 col-12 col-md-12 ">
+						<div class="shadow-lg mt-5 div-description-floatting2-text2">
+							<p class="p-4">Le moyen rapide et simple pour organiser son temps</p>
+						</div>
+					</div>
+					<div class="col-lg-6 col-12 col-md-12">
+						<div class="shadow-lg div-description-floatting2-text3">
+							<p class="f-family p-4">Nos collaborateurs sont à votre disposition 24h/24 et 7j/7</p>
+						</div><br>
+					</div>
+					<div class="col-lg-6 col-12 col-md-12">
+						<div class="shadow-lg mt-5 div-description-floatting2-text4">
+							<p class="p-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+						</div><br>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row p-2 communaute-div-row">
+			
+			<div class="col-12 col-lg-6 col-md-12 p-5">
+				<p class="mt-5 communaute-text">Rejoignez notre <br> <span class="color">communauté</span></p><br>
+				<p class="fs-16">Faisons quelque chose de grand ensemble. Plus de 5000 utilisateurs enregistrés sur notre site. Rejoignez-les en utilisant nos services de listes de taches et organiser votre temps</p><br>
+			</div>
+			<div class="col-12 col-lg-6 col-md-12 mt-5">
+				
+				<div class="row">
+					<div class="col-12 col-lg-6 col-md-12 p-4">
+						<div class="row shadow-lg bd-10 lh-10">
+							<div class="col-6 pt-4 text-center">
+								<span class="fa fa-child fa-2x color"></span>
+							</div>
+							<div class="col-6">
+								<p class="pt-4 fs-35 fw-bold color">50k</p><br>
+								<p class="fs-13">Utilisateurs</p><br>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-lg-6 col-md-12 p-4">
+						<div class="row shadow-lg bd-10 lh-10">
+							<div class="col-6 pt-4 text-center">
+								<span class="fa fa-cubes fa-2x color"></span>
+							</div>
+							<div class="col-6">
+								<p class="pt-4 fs-35 fw-bold color">100k</p><br>
+								<p class='fs-13'>Taches crées</p><br>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-lg-6 col-md-12 p-4">
+						<div class="row shadow-lg bd-10 lh-10">
+							<div class="col-6 pt-4 text-center">
+								<span class="color fa fa-check-square fa-2x" ></span>
+							</div>
+							<div class="col-6">
+								<p class="pt-4 fs-35 fw-bold color">300k</p><br>
+								<p class='fs-13'>Projets réalisé</p><br>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-lg-6 col-md-12 p-4">
+						<div class="row shadow-lg bd-10 lh-10">
+							<div class="col-6 pt-4 text-center">
+								<span class="fa fa-user fa-2x color" ></span>
+							</div>
+							<div class="col-6">
+								<p class="pt-4 fs-35 fw-bold color">200k</p><br>
+								<p class='fs-13'>Visites</p><br>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row mt-50">
+			<div class="col-12 col-lg-6 col-md-12 mt-3 p-4">
+				<p class="mt-2 px-4 fs-30 fw-bold">Avoir un contrôle <span class="color">parfait</span></p>
+				<p class="px-4 floatting-sous-div-contenu ">Avoir le contrôle sur vos taches,votre temps , afin de réduire les pertes de temps d'au moins 98%.</p><br>
+				<div class="row">
+					<div class="col-12 col-lg-6 col-md-12 p-3">
+						<div class="floatting-sous-div-contenu px-4">
+							<p><span class="fa fa-check-circle color"></span> Nos collaborateurs sont à votre disposition 24h/24 et 7j/7</p>
+						</div>
+					</div>
+					<div class="col-12 col-lg-6 col-md-12 p-3">
+						<div class="floatting-sous-div-contenu px-4">
+							<p><span class="fa fa-check-circle color"></span> Le moyen rapide et simple pour organiser son temps </p>
+						</div>
+					</div>
+					<div class="col-12 col-lg-6 col-md-12 p-3">
+						<div class="floatting-sous-div-contenu px-4">
+							<p><span class="fa fa-check-circle color"></span> Professionnel, sûr et sécurisé </p>
+						</div>
+					</div>
+					<div class="col-12 col-lg-6 col-md-12 p-3">
+						<div class="floatting-sous-div-contenu px-4">
+							<p><span class="fa fa-check-circle color"></span> Prise en charge de plusieurs langues </p>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<div class="col-12 col-lg-6 col-md-12 mt-5">
+				<img class='d-none d-lg-block d-md-block' src="https://img.freepik.com/premium-vector/video-conference-minimalistic-concept-with-people-scene-flat-cartoon-style_198565-3543.jpg?w=2000" width="600px">
+				<img class=' d-lg-none d-md-none' src="https://img.freepik.com/premium-vector/video-conference-minimalistic-concept-with-people-scene-flat-cartoon-style_198565-3543.jpg?w=2000" width="300px">
+			</div>
+		</div>
+	</div>
+
+
+	
+
+	<div class="container d-block d-lg-none d-md-none">
+		<div class="row p-2 bd-10 color mt-150 bd-tr-80 bg-color">
+			
+			<div class="col-12 p-5 text-white">
+				<p class="mt-2 fs-30 fw-bold">Abonnez-vous à notre newsletter</p><br>
+				<p style="font-size:16px">Abonnez-vous à notre newsletter pour recevoir nos nouvelles et nos offres. Ne vous inquiétez pas, nous détestons les spams et nous respectons votre vie privée.</p><br>
+			</div>
+			<div class="col-12">
+				
+				<form class="p-4">
+					<div class="form-group">
+						<input type="email" name="email" class="form-control h-60 b-none bg-white" placeholder="Adresse email">
+					</div>
+					<div class="form-group mt-3">
+						<button class="btn text-white w-100 h-60 bg-black">Souscrire</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="container d-none d-lg-block d-md-block">
+		<div class="row p-2 bd-10 color mt-150 bd-tr-80 bg-color">
+			
+			<div class="col-6 p-5 text-white">
+				<p class="mt-2 fs-30 fw-bold">Abonnez-vous à notre newsletter</p><br>
+				<p style="font-size:16px">Abonnez-vous à notre newsletter pour recevoir nos nouvelles et nos offres. Ne vous inquiétez pas, nous détestons les spams et nous respectons votre vie privée.</p><br>
+			</div>
+			<div class="col-6 mt-5">
+				
+				<form class="flex-center mt-100">
+					<div class="form-group">
+						<input type="email" name="email" class="form-control h-60 w-350 b-none bg-white" placeholder="Adresse email">
+					</div>
+					<div class="form-group">
+						<button class="btn text-white w-100 h-60 bg-black">Souscrire</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

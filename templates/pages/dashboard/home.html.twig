@@ -1,0 +1,142 @@
+{% extends 'base.html.twig' %}
+{% block header %}
+
+		<div class="container-fluid shadow-sm p-0 m-0" style="">
+		<div class="row p-4">
+			<div class="col-12 col-lg-2 col-md-2" style="display:flex;justify-content: center;align-items: center;">
+				<span style="font-size:20px;font-weight: bolder;"><span >M</span><span class="p-3 shadow-lg" style="background-color:#0663f8;color: white;border-top-left-radius: 10px;border-top-right-radius: 10px;">y</span><span >Todo</span></span><?php require'sidebar.php' ?>
+			</div>
+			<div class="col-lg-7">
+			{{form_start(form)}}
+					<div class='row'>
+						<div class='col-10 mt-3'>
+							<div class="form-group">	
+								{{form_widget(form.name)}}
+								{{form_errors(form.name)}}
+							</div>
+						</div>
+						<div class='col-2 mt-3'>
+							<div class="form-group">	
+								{{form_row(form.submit)}}
+							</div>
+						</div>
+
+					</div>
+				{{form_rest(form)}}
+			{{form_end(form)}}
+			</div>
+			<div class="col-lg-1 col-md-1 col-4 p-3 text-center">
+				<div style="background-color:#eee;width: 40px;height:50px;border-radius:5px;display: flex;justify-content: center;align-items: center;">
+					<a data-toggle="tooltip" data-placement="top" title="Changer de langues" href="" style="text-decoration:none;"><span class="p-2 fa fa-language" style=""></span></a>
+				</div>
+			</div>
+			<div class="col-lg-1 col-md-1 col-4 p-3 text-center">
+				<div style="background-color:#eee;width: 40px;height:50px;border-radius:5px;display: flex;justify-content: center;align-items: center;">
+					<a data-toggle="tooltip" data-placement="top" title="Accueil" href="{{path('home')}}" style="text-decoration:none;"><span class="p-2 fa fa-home" style=""></span></a>
+				</div>
+			</div>
+			{% if app.user %}
+        		<div class="col-lg-1 col-md-1 col-4 p-3 text-center">
+					<div style="background-color:#eee;width: 40px;height:50px;border-radius:5px;display: flex;justify-content: center;align-items: center;">
+						<a data-toggle="tooltip" data-placement="top" title="Se déconnecter" href="{{ path('app_logout') }}" style="text-decoration:none;"><span class="p-2 fa fa-user" ></span></a>
+					</div>
+				</div>
+    		{% endif %}
+		</div>
+	</div>
+	{% endblock %}
+
+	{% block body %}
+	<div class="container mt-5">
+		<div class="row">
+			<div class="col-lg-8 col-12 col-md-12 mt-2">
+				<div class="row mx-2">
+					<div class="col-12 text-white shadow-lg" style="background-color:#0663f8;border-radius:10px">
+						<div class="p-4">
+							<div data-aos="zoom-in" data-aos-duration="1000" style="display:flex;justify-content: space-between;">
+								<p class="text-rechercher2">My TodoList</p>
+								<p class="text-rechercher2"><span class="fa fa-cubes fa-2x"></span></p>
+							</div>
+							<p data-aos="zoom-in" data-aos-duration="1000" class="titre-newsletter " style="font-size:22px;font-weight:bold;">{{ app.user.userIdentifier }}, </p>
+							<p data-aos="zoom-in" data-aos-duration="1000" class="text-rechercher2">Bienvenue sur votre espace</p>
+						</div>	
+					</div>
+				</div>
+			</div>
+
+
+			<div class="col-4 col-lg-4 col-md-12 d-none d-lg-block d-md-block">
+				<div class="row ">
+					
+					<div class="col-6" data-toggle="tooltip" data-placement="top" title="Listes des taches" data-aos="zoom-in" data-aos-duration="1000">
+						<div class="m-2">
+							<div class="row p-3 shadow-lg" style="background-color:#fff;display: flex;align-items: space-between;border-radius: 10px;border-top:5px solid #0663f8;">
+								<div class="col-9">
+									<div>
+										<p class="" style="font-size:25px;font-weight:bold;color: #0663f8;">0</p>
+										<p class="text-newsletter" style="font-size:14px">Tache(s)</p>
+									</div>
+								</div>
+								<div class="col-3 px-1 ">
+									<p style="border:4px solid #0663f8;width: 40px;height: 40px;border-radius: 100px;background-color: #0663f8;"><span class="px-2 mt-2 fa fa-institution" style="color:#fff;"></span></p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-6 " data-toggle="tooltip" data-placement="top" title="Listes des taches importants" data-aos="zoom-in" data-aos-duration="1000">
+						<div class="m-2">
+							<div class="row p-3 shadow-lg" style="background-color:#fff;display: flex;align-items: space-between;border-radius: 10px;border-top:5px solid #0663f8;">
+								<div class="col-9">
+									<div>
+										<p class="" style="font-size:25px;font-weight:bold;color: #0663f8;">0</p>
+										<p class="text-newsletter" style="font-size:14px">Important</p>
+									</div>
+								</div>
+								<div class="col-3 px-1">
+									<p style="border:4px solid #0663f8;width: 40px;height: 40px;border-radius: 100px;background-color: #0663f8;"><span class="px-2 mt-2 fa fa-star" style="color:#fff;"></span></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12 mt-5 p-5 shadow-lg" style="border-radius:10px;font-size:15px">
+				{% for message in app.flashes('success') %}
+		            <div class='alert alert-info mt-2 p-3 flash-success'>
+		                <p>{{message}}</p>
+		            </div>
+            	{% endfor %}
+				<div class='mt-3' style="display:flex;justify-content: space-between;font-size: 14px;color: black;">
+					<p>Mes Taches</p>
+					<p>Trier par <span class="fa fa-angle-double-down"></span></p>
+				</div>
+				{% for t in tasks %}
+					<div class="row px-2 py-3" style="border-bottom:1px solid #eee">
+						
+						<div class="col-9">
+							<p style="font-size:13px" data-aos="zoom-out" data-aos-duration="1000">{{t.name}}</p>
+							<div style="display:flex;justify-content: space-arround;padding: 100;font-size: 12px;color: gray;">
+								<p class="pr-2">Taches</p>
+								<p class="px-3"><span class="fa fa-calendar"> </span>{{t.createdAt|date('d/m/Y')}}</p>
+							</div>
+						</div>
+
+						<div class="offset-1 col-1">
+							<a class="nav-link" href="{{path('delete',{id:t.id})}}"><span class='fa fa-trash'></span></a>
+						</div>
+						<div class="offset-1 col-1">
+							<a class="nav-link" href="{{path('edit',{id:t.id})}}"><span class='fa fa-pencil'></span></a>
+						</div>
+							
+					</div>
+					{% endfor %}
+				</div>
+		 	</div>
+			<div class='mt-3 navigation d-flex justify-content-center'>
+                {{knp_pagination_render(tasks)}}
+            </div>
+		</div>
+
+{% endblock %}
